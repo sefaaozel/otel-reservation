@@ -1,0 +1,49 @@
+﻿
+<link href="~/css/pages/reservationSecondStep.css" rel="stylesheet" />
+
+<h3>2.Adım</h3>
+<p>Lütfen odanızın özelliklerini seçiniz.</p>
+
+<div class="row" id="selectRoomDiv">
+    <div class="col-3">
+        <label>Oda Tipi:</label>
+    </div>
+    <div class="col-6">
+        <label><input type="checkbox" name="roomTypes" id="standartRoom" class="selectRoomType" value="standartRoom">Standart</label>
+        <label><input type="checkbox" name="roomTypes" id="deluxRoom" class="selectRoomType" value="deluxRoom">Delux</label>
+        <label><input type="checkbox" name="roomTypes" id="suitRoom" class="selectRoomType" value="suitRoom">Suit</label>
+    </div>
+</div>
+<div class="row" id="selectViewDiv">
+    <div class="col-3">
+        <label>Manzara Seçimi:</label>
+    </div>
+    <div class="col-6">
+        <label><input type="checkbox" name="viewTypes" id="seaViewRoom" class="selectRoomView" value="seaViewRoom">Deniz</label>
+        <label><input type="checkbox" name="viewTypes" id="ovarlandViewRoom" class="selectRoomView" value="ovarlandViewRoom">Kara</label>
+    </div>
+</div>
+<br />
+<br />
+
+<div class="row">
+    <div class="col-3">
+        <div class="text-left">
+            <button id="backToFirstStepBtn" type="button" class="btn btn-outline-dark">Geri</button>
+        </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+    <div class="col-3">
+        <div class="text-right">
+            <button id="passToThirdStepBtn" type="button" class="btn btn-outline-primary">3.Adım</button>
+        </div>
+    </div>
+</div>
+<br />
+
+<div id="checkIsNullAlert" class="alert alert-danger" data-alert="alert">Oda Tipi ve Manzara Seçenekleri boş bırakılamaz.</div>
+
+
+<script src="~/js/pages/reservationPages/secondStepPage.js"></script>

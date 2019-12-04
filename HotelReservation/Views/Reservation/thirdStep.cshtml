@@ -1,0 +1,36 @@
+﻿<link href="~/css/pages/component/creditcard.css" rel="stylesheet" />
+<link href="~/css/pages/reservationThirdStep.css" rel="stylesheet" />
+
+<h3>3.Adım</h3>
+<p>Lütfen ödeme işlemi için gerekli alanları doldurunuz.</p>
+
+<br />
+
+<div id="creditCardFormDiv">
+    @Html.Partial("/Views/Shared/components/_CreditCardForm.cshtml")
+</div>
+
+<br />
+
+<div id="reservationIsSuccess" class="alert alert-success" data-alert="alert">Rezervasyonunuz başarılı bir şekilde tamamlanmıştır. Size en kısa sürede dönüş yapacağız. Teşekkürler.</div>
+
+
+<div class="row">
+    <div class="col-3">
+        <div class="text-left">
+            <button type="button" class="btn btn-outline-dark" id="backToSecondStep">Geri</button>
+        </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+    <div class="col-3">
+        <div class="text-right">
+            <button type="button" id="reservationComplateBtn" class="btn btn-outline-primary"> Tamamla</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/pages/reservationPages/thirdStepPage.js"></script>

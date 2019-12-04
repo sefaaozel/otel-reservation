@@ -1,0 +1,128 @@
+﻿
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 mx-auto">
+            <div class="bg-white rounded-lg shadow-sm p-5">
+                <!-- Kredi Kartı Form Tabı Başlangıç -->
+                <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                            <i class="fa fa-credit-card"></i>
+                            Kredi Kartı
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                            <i class="fa fa-paypal"></i>
+                            Paypal
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                            <i class="fa fa-university"></i>
+                            Banka Bilgileri
+                        </a>
+                    </li>
+                </ul>
+                <!-- Kredi Kartı Form Tabı Bitiş -->
+
+
+                <div class="tab-content">
+                    <!--KRedi Kartı Bilgisi -->
+                    <div id="nav-tab-card" class="tab-pane fade show active">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="username">İsim Soyisim (kart üzerindeki)</label>
+                                <input type="text" id="username" name="username" placeholder="Sefa Özel" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber">Kart Numarası</label>
+                                <div class="input-group">
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="**** **** **** ****" class="form-control" maxlength="16" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text text-muted">
+                                            <i class="fa fa-cc-visa mx-1"></i>
+                                            <i class="fa fa-cc-amex mx-1"></i>
+                                            <i class="fa fa-cc-mastercard mx-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xs">Son Kullanım Tarihi</span></label>
+                                        <div class="input-group">
+                                            <input type="number" id="cardLastDateMonth" placeholder="Ay" name="" class="form-control" required>
+                                            <input type="number" id="cardLastDateYear" placeholder="Yıl" name="" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="form-group mb-4">
+                                        <label data-toggle="tooltip" title="Kartınızın arka tarafında yer alan 3 haneli numara.">
+                                            CVV
+                                            <i class="fa fa-question-circle"></i>
+                                        </label>
+                                        <input type="text" id="cardCVV" required class="form-control" maxlength="3">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <button type="button" id="acceptToPayBtn" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm"> Ödemeyi Tamamla  </button>
+
+                            <div id="creditCardIsInfoNull" class="alert alert-danger" data-alert="alert">Kredi Kartı Alanları Eksiksiz Olmalıdır.</div>
+
+                        </form>
+                    </div>
+                    <!-- Bitiş -->
+
+
+                    <!-- Paypal  -->
+                    <div id="nav-tab-paypal" class="tab-pane fade">
+                        <p>Paypal online ödeme yapmanızın kolay bir yoludur.</p>
+                        <p>
+                            <button type="button" class="btn btn-primary rounded-pill"><i class="fa fa-paypal mr-2"></i>Paypal hesabınıza giriş yapınız</button>
+                        </p>
+                        <p class="text-muted">
+                            Paypal hesabınıza giriş yaparak kolayca ödeme işlemenizi gerçekleştirebilirsiniz.
+                        </p>
+                    </div>
+                    <!-- Bitiş -->
+
+
+                    <!-- Banka Bilgileri -->
+                    <div id="nav-tab-bank" class="tab-pane fade">
+                        <h6>Banka Hesap Bilgileri</h6>
+                        <dl>
+                            <dt>Banka</dt>
+                            <dd>Sef Bankası</dd>
+                        </dl>
+                        <dl>
+                            <dt>IBAN Numarası</dt>
+                            <dd>TR11 0000 0000 0000 1111 11</dd>
+                        </dl>
+                        <dl>
+                            <dt>Hesap Sahibi</dt>
+                            <dd>Sef Otelleri İşletmeciliği A.Ş.</dd>
+                        </dl>
+                        <p class="text-muted">
+                            Ödemeyi HAVALE/EFT yolu ile yukarıda bulunan hesaba gönderebilirsiniz. İşlemi tamamladıktan sonra işlem dekontunu <b>rezervasyon@sefotel.com</b> adresine gönderiniz.
+                        </p>
+                    </div>
+                    <!-- Banka Bilgileri Bitiş -->
+                </div>
+                <!-- Bitiş -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/components/creditcard.js"></script>
